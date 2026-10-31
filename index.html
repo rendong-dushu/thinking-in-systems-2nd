@@ -211,6 +211,7 @@ main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:0 0 60px;isolatio
 .napkin-sketch .sk-label{fill:var(--ink);font-family:var(--font-display);font-weight:700;font-size:11px}
 .napkin-sketch .sk-label.sk-tmid,.napkin-sketch .sk-label.sk-tend{fill:var(--white)}
 .napkin-sketch .sk-line{fill:none;stroke:var(--green);stroke-width:1.4;stroke-opacity:.45;shape-rendering:crispEdges}
+.napkin-sketch .sk-line.sk-back{stroke-dasharray:4 3;stroke-opacity:.62}
 .napkin-sketch .sk-arrow{fill:var(--green)}
 /* 转换标签：纯文字挪到引线上方（不套框、不压箭头） */
 .napkin-sketch .sk-elabel{fill:var(--green);font-family:var(--font-display);font-weight:700;font-size:11px}
@@ -915,12 +916,12 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     </div>
 
         <div class="napkin-sketch">
-      <script type="application/json" id="bd-sketch-data">{"type": "loop", "caption": "你越用力救火，火越大：这条回路没人画出来，所以每一轮都像是新的", "nodes": [{"id": "ev", "label": "又出了一件事"}, {"id": "fix", "label": "立刻上症状解"}, {"id": "ok", "label": "看上去好了"}, {"id": "side", "label": "副作用悄悄累积", "mid": true}, {"id": "worse", "label": "问题比原来更重"}, {"id": "draw", "label": "把这几步画成环"}, {"id": "dom", "label": "认出主导的那个环"}, {"id": "lever", "label": "在结构上动手"}, {"id": "gone", "label": "同一个问题不再回来"}], "edges": [{"from": "ev", "to": "fix", "label": ""}, {"from": "fix", "to": "ok", "label": "立刻见效"}, {"from": "fix", "to": "side", "label": "有延迟"}, {"from": "side", "to": "worse", "label": ""}, {"from": "worse", "to": "ev", "label": "下一轮"}, {"from": "worse", "to": "draw", "label": "被逼到墙角"}, {"from": "draw", "to": "dom", "label": "数负号"}, {"from": "dom", "to": "lever", "label": ""}, {"from": "lever", "to": "gone", "label": ""}]}</script>
+      <script type="application/json" id="bd-sketch-data">{"type": "loop", "caption": "你越用力救火，火越大：这条回路没人画出来，所以每一轮都像是新的", "nodes": [{"id": "ev", "label": "又出了一件事"}, {"id": "fix", "label": "立刻上症状解"}, {"id": "ok", "label": "看上去好了"}, {"id": "side", "label": "副作用悄悄累积", "mid": true}, {"id": "worse", "label": "问题比原来更重"}, {"id": "draw", "label": "画成环，认出主导环"}, {"id": "lever", "label": "在结构上动手"}, {"id": "gone", "label": "同一个问题不再回来"}], "edges": [{"from": "ev", "to": "fix", "label": ""}, {"from": "fix", "to": "ok", "label": "立刻见效"}, {"from": "fix", "to": "side", "label": "有延迟"}, {"from": "side", "to": "worse", "label": ""}, {"from": "worse", "to": "ev", "label": "下一轮"}, {"from": "worse", "to": "draw", "label": "被逼到墙角"}, {"from": "draw", "to": "lever", "label": "数负号"}, {"from": "lever", "to": "gone", "label": ""}]}</script>
       <div id="bd-sketch"></div>
     </div>
 
         <div class="bd-mindmap-wrap">
-      <script type="application/json" id="bd-mindmap-data">{"layout": "chapter-span", "nodeData": {"id": "root", "topic": "如何系统思考（第2版）", "root": true, "children": [{"id": "p1", "topic": "① 先认清它是什么", "children": [{"id": "p1-v0", "topic": "三样缺一不可", "tags": ["系统是实体、连接、目标三样，缺一样就不成系统", "第2章"], "hyperLink": "#ch-2", "expanded": false, "children": [{"id": "p1-c0", "topic": "💡 系统", "_src": "原书第1章 · 约全书12%处", "children": [{"id": "p1-x2", "topic": "📚 《系统之美》", "_src": "系统之美"}]}, {"id": "p1-r1", "topic": "⚖️ 你手上有一个反复出现、已经持续…", "_src": "原书第1章 · 约全书16%处", "children": [{"id": "p1-a2", "topic": "📖 德内拉·梅多斯", "_src": "原书第1章 · 约全书14%处"}]}]}, {"id": "p1-v1", "topic": "结构决定行为", "tags": ["结构影响行为：改不了结构，就只能一直救火", "第7章"], "hyperLink": "#ch-7", "expanded": false, "children": [{"id": "p1-m0", "topic": "🧠 数负号", "_src": "第6章：对于任何连续的闭合回路，沿着环完整地走一圈，数数一共有多少个「-」型连接。如果有零或偶数个「-」型连接，那么这个回路就是一个增强回路（原书第6章 · 约全书47%处）"}, {"id": "p1-c1", "topic": "💡 存量与流量", "_src": "原书第6章 · 约全书44%处", "children": [{"id": "p1-x7", "topic": "📚 《思考，快与慢》", "_src": "思考，快与慢"}]}, {"id": "p1-r2", "topic": "⚖️ 你画完了一个环，不确定它是越滚…", "_src": "原书第6章 · 约全书47%处"}]}, {"id": "p1-v2", "topic": "四层只看见一层", "tags": ["冰山四层：事件、模式、结构、心智模式，多数人只在水面上", "第4章"], "hyperLink": "#ch-4", "expanded": false, "children": [{"id": "p1-m0", "topic": "🧠 排成曲线", "_src": "第3章讲行为模式图的四个价值：透过现象看本质把握关键、拉长时间的维度避免关注孤立的事件、保持客观避免主观偏见、协助识别系统结构（原书第3章 · 约全书24%处）"}, {"id": "p1-c1", "topic": "💡 冰山模型", "_src": "原书第3章 · 约全书22%处", "children": [{"id": "p1-x4", "topic": "📚 《黑天鹅》", "_src": "黑天鹅"}]}, {"id": "p1-r2", "topic": "⚖️ 有人向你汇报一个问题，第一句话…", "_src": "原书第3章 · 约全书23%处"}]}]}, {"id": "p2", "topic": "② 结果会绕回来", "children": [{"id": "p2-v0", "topic": "结果会绕回来", "tags": ["因果不是链，是环：结果会绕回来改原因", "第5章"], "hyperLink": "#ch-5", "expanded": false, "children": [{"id": "p2-c0", "topic": "💡 环形思考法", "_src": "原书第4章 · 约全书32%处", "children": [{"id": "p2-x5", "topic": "📚 《反脆弱》", "_src": "反脆弱"}]}, {"id": "p2-r1", "topic": "⚖️ 你分析原因，列出来的是一串并列…", "_src": "原书第4章 · 约全书33%处", "children": [{"id": "p2-a5", "topic": "📖 荀子", "_src": "原书第4章 · 约全书31%处"}]}]}, {"id": "p2-v1", "topic": "数负号分两种", "tags": ["所有回路只有两种，数负号就能认出来", "第7章"], "hyperLink": "#ch-7", "expanded": false, "children": [{"id": "p2-m0", "topic": "🧠 先找延迟", "_src": "第6章：时间延迟有可能使人们麻痹、放松警惕，从而造成意想不到的后果；当时间延迟所在的回路为调节回路时，它容易使解决方案似乎不奏效，导致人们为了得到想要的结果而做出更大幅度的努力，从而引发震荡，或矫枉过正（原书第6章 · 约全书54%处）"}, {"id": "p2-c1", "topic": "💡 增强回路", "_src": "原书第6章 · 约全书48%处", "children": [{"id": "p2-x7", "topic": "📚 《原则》", "_src": "原则"}]}, {"id": "p2-r2", "topic": "⚖️ 一项措施明明有道理，落地之后却…", "_src": "原书第6章 · 约全书54%处"}]}, {"id": "p2-v2", "topic": "延迟是最短的线", "tags": ["时间延迟是那条最短的线，也是最容易被忽略的杠杆", "第7章"], "hyperLink": "#ch-7", "expanded": false, "children": [{"id": "p2-m0", "topic": "🧠 各画一张图", "_src": "第6章：每一幅因果回路图都是参与者心智模式的「投射」或视觉化呈现，因为人们在定义变量的过程中隐含着自己的关注点和价值取舍（原书第6章 · 约全书51%处）"}, {"id": "p2-c1", "topic": "💡 调节回路", "_src": "原书第6章 · 约全书49%处"}]}]}, {"id": "p3", "topic": "③ 边界是你画的", "children": [{"id": "p3-v0", "topic": "是信息够不着", "tags": ["本位主义不是品德问题，是信息结构问题", "第6章"], "hyperLink": "#ch-6", "expanded": false, "children": [{"id": "p3-m0", "topic": "🧠 翻译成信息问题", "_src": "第5章：人们获取不到足够的全局信息，无法建立全局信念，而本地信念的强化削弱了人们对全局信息的关注，使获取全局信息的能力被削弱。这样就逐渐形成了牢不可破的局限思考模式（原书第5章 · 约全书39%处）"}, {"id": "p3-c1", "topic": "💡 思考的罗盘", "_src": "原书第5章 · 约全书37%处"}, {"id": "p3-r2", "topic": "⚖️ 你要分析的问题牵涉很多部门，会…", "_src": "原书第5章 · 约全书37%处"}]}, {"id": "p3-v1", "topic": "定窄了漏", "tags": ["边界是你自己定的：定窄了漏，定宽了糊", "第6章"], "hyperLink": "#ch-6", "expanded": false, "children": [{"id": "p3-m0", "topic": "🧠 边界随问题重划，不沿用上", "_src": "第5章：对于每一个新问题，我们都需要并且应该忘掉在上一次任务中行之有效的边界划分，针对当前具体的问题或目的，创造性地设定最合适的边界（原书第5章 · 约全书42%处）"}, {"id": "p3-r1", "topic": "⚖️ 有人主张「要有大局观」…", "_src": "原书第5章 · 约全书39%处"}]}]}, {"id": "p4", "topic": "④ 不画出来就看不见", "children": [{"id": "p4-v0", "topic": "得学一种新语言", "tags": ["不学一种新语言，系统思考只能停在认知层面", "第7章"], "hyperLink": "#ch-7", "expanded": false, "children": [{"id": "p4-c0", "topic": "💡 时间延迟", "_src": "原书第6章 · 约全书53%处"}]}, {"id": "p4-v1", "topic": "图画的是你的假设", "tags": ["图是心智模式的投影，画出来才看得见自己的假设", "第7章"], "hyperLink": "#ch-7", "expanded": false, "children": [{"id": "p4-c0", "topic": "💡 因果回路图", "_src": "原书第6章 · 约全书43%处"}]}]}, {"id": "p5", "topic": "⑤ 只在主导环上动手", "children": [{"id": "p5-v0", "topic": "只有两件事", "tags": ["管理者只有两件事：设计成长引擎，解决问题", "第9章"], "hyperLink": "#ch-9", "expanded": false, "children": [{"id": "p5-c0", "topic": "💡 成长引擎", "_src": "原书第8章 · 约全书72%处"}, {"id": "p5-r1", "topic": "⚖️ 你要设计一项业务的增长，但说不…", "_src": "原书第8章 · 约全书76%处"}]}, {"id": "p5-v1", "topic": "94% 是系统的", "tags": ["94% 的问题是系统带来的，不是人带来的", "第10章"], "hyperLink": "#ch-10", "expanded": false, "children": [{"id": "p5-c0", "topic": "💡 主导回路", "_src": "原书第9章 · 约全书88%处"}, {"id": "p5-r1", "topic": "⚖️ 问题很复杂，你要决定是用传统的…", "_src": "原书第9章 · 约全书82%处"}]}, {"id": "p5-v2", "topic": "根本解在主导环上", "tags": ["根本解不在症状旁边，在主导回路上", "第10章"], "hyperLink": "#ch-10", "expanded": false, "children": [{"id": "p5-c0", "topic": "💡 杠杆解", "_src": "原书第9章 · 约全书90%处"}, {"id": "p5-r1", "topic": "⚖️ 团队对同一个问题各执一词，会开…", "_src": "原书第9章 · 约全书89%处"}]}]}]}}</script>
+      <script type="application/json" id="bd-mindmap-data">{"layout": "chapter-span", "nodeData": {"id": "root", "topic": "如何系统思考（第2版）", "root": true, "children": [{"id": "p1", "topic": "① 先认清它是什么", "children": [{"id": "p1-v0", "topic": "三样缺一不可", "tags": ["系统是实体、连接、目标三样，缺一样就不成系统", "第2章"], "hyperLink": "#ch-2", "expanded": false, "children": [{"id": "p1-c0", "topic": "💡 系统", "_src": "原书第1章 · 约全书12%处"}]}, {"id": "p1-v1", "topic": "结构决定行为", "tags": ["结构影响行为：改不了结构，就只能一直救火", "第7章"], "hyperLink": "#ch-7", "expanded": false, "children": [{"id": "p1-m0", "topic": "🧠 数负号", "_src": "第6章：对于任何连续的闭合回路，沿着环完整地走一圈，数数一共有多少个「-」型连接。如果有零或偶数个「-」型连接，那么这个回路就是一个增强回路（原书第6章 · 约全书47%处）"}, {"id": "p1-c1", "topic": "💡 存量与流量", "_src": "原书第6章 · 约全书44%处"}]}]}, {"id": "p2", "topic": "② 结果会绕回来", "children": [{"id": "p2-v0", "topic": "结果会绕回来", "tags": ["因果不是链，是环：结果会绕回来改原因", "第5章"], "hyperLink": "#ch-5", "expanded": false, "children": [{"id": "p2-c0", "topic": "💡 环形思考法", "_src": "原书第4章 · 约全书32%处"}]}, {"id": "p2-v1", "topic": "延迟是最短的线", "tags": ["时间延迟是那条最短的线，也是最容易被忽略的杠杆", "第7章"], "hyperLink": "#ch-7", "expanded": false, "children": [{"id": "p2-m0", "topic": "🧠 先找延迟", "_src": "第6章：时间延迟有可能使人们麻痹、放松警惕，从而造成意想不到的后果；当时间延迟所在的回路为调节回路时，它容易使解决方案似乎不奏效，导致人们为了得到想要的结果而做出更大幅度的努力，从而引发震荡，或矫枉过正（原书第6章 · 约全书54%处）"}, {"id": "p2-c1", "topic": "💡 增强回路", "_src": "原书第6章 · 约全书48%处"}]}]}, {"id": "p3", "topic": "③ 边界是你画的", "children": [{"id": "p3-v0", "topic": "是信息够不着", "tags": ["本位主义不是品德问题，是信息结构问题", "第6章"], "hyperLink": "#ch-6", "expanded": false, "children": [{"id": "p3-m0", "topic": "🧠 翻译成信息问题", "_src": "第5章：人们获取不到足够的全局信息，无法建立全局信念，而本地信念的强化削弱了人们对全局信息的关注，使获取全局信息的能力被削弱。这样就逐渐形成了牢不可破的局限思考模式（原书第5章 · 约全书39%处）"}, {"id": "p3-c1", "topic": "💡 思考的罗盘", "_src": "原书第5章 · 约全书37%处"}]}, {"id": "p3-v1", "topic": "定窄了漏", "tags": ["边界是你自己定的：定窄了漏，定宽了糊", "第6章"], "hyperLink": "#ch-6", "expanded": false, "children": [{"id": "p3-m0", "topic": "🧠 边界随问题重划…", "_src": "第5章：对于每一个新问题，我们都需要并且应该忘掉在上一次任务中行之有效的边界划分，针对当前具体的问题或目的，创造性地设定最合适的边界（原书第5章 · 约全书42%处）"}]}]}, {"id": "p4", "topic": "④ 不画出来就看不见", "children": [{"id": "p4-v0", "topic": "得学一种新语言", "tags": ["不学一种新语言，系统思考只能停在认知层面", "第7章"], "hyperLink": "#ch-7", "expanded": false, "children": [{"id": "p4-m0", "topic": "🧠 各画一张图", "_src": "第6章：每一幅因果回路图都是参与者心智模式的「投射」或视觉化呈现，因为人们在定义变量的过程中隐含着自己的关注点和价值取舍（原书第6章 · 约全书51%处）"}, {"id": "p4-c1", "topic": "💡 调节回路", "_src": "原书第6章 · 约全书49%处"}]}, {"id": "p4-v1", "topic": "图画的是你的假设", "tags": ["图是心智模式的投影，画出来才看得见自己的假设", "第7章"], "hyperLink": "#ch-7", "expanded": false, "children": [{"id": "p4-c0", "topic": "💡 时间延迟", "_src": "原书第6章 · 约全书53%处"}]}]}, {"id": "p5", "topic": "⑤ 只在主导环上动手", "children": [{"id": "p5-v0", "topic": "只有两件事", "tags": ["管理者只有两件事：设计成长引擎，解决问题", "第9章"], "hyperLink": "#ch-9", "expanded": false, "children": [{"id": "p5-c0", "topic": "💡 成长引擎", "_src": "原书第8章 · 约全书72%处"}]}, {"id": "p5-v1", "topic": "94% 是系统的", "tags": ["94% 的问题是系统带来的，不是人带来的", "第10章"], "hyperLink": "#ch-10", "expanded": false, "children": [{"id": "p5-c0", "topic": "💡 主导回路", "_src": "原书第9章 · 约全书88%处"}]}]}]}}</script>
       <div id="bd-mindmap">
         <div class="mm-stage" aria-hidden="false"></div>
         <div class="mm-toolbar">
@@ -933,7 +934,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
         <div class="mm-toast" aria-hidden="true"></div>
         <div class="mm-zoom" aria-hidden="true">100%</div>
       </div>
-      <p class="mm-caption">点任一分支的章码，直达该章精读。滚轮 / 双指缩放 · 拖动平移 · 双击复位 · 矢量放大不糊。</p>
+      <p class="mm-caption">每根支柱只列最核心 2 条，看完骨架再往下读。点章码直达该章精读；滚轮 / 双指缩放 · 拖动平移 · 双击复位。</p>
     </div>
 
         <div class="bd-coreideas">
@@ -2546,14 +2547,30 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     if (nodes.length < 2){ wrap.style.display = 'none'; return; }
     const SVGNS = 'http://www.w3.org/2000/svg';
     const byId = {}; nodes.forEach(n => { byId[n.id] = n; });
-    // 分层：最长路径（源在 0 层，沿边 +1；带上限防环）
-    const layer = {}; nodes.forEach(n => { layer[n.id] = 0; });
+    // 分层：先剔除构成回路的那条「回边」，再在剩下的 DAG 上求最长路径。
+    // 为什么不能直接跑最长路径：图里有回路时（eg. 问题更重 -> 又出了一件事「下一轮」），
+    // 层号会随每次迭代持续 +1，最终得到互相矛盾的列序（「立刻上症状解」被排到
+    // 「看上去好了」右边、箭头倒着走），连线标签也全部叠在同一处。必须先破环。
     const N = nodes.length;
-    for (let it = 0; it < N + 2; it++){
+    const adj = {}; nodes.forEach(n => { adj[n.id] = []; });
+    edges.forEach(e => { if (adj[e.from] && byId[e.to] !== undefined) adj[e.from].push(e.to); });
+    const dfsSt = {}, backE = {};
+    const dfs = id => {
+      dfsSt[id] = 1;
+      (adj[id] || []).forEach(to => {
+        if (dfsSt[to] === 1) backE[id + '>' + to] = true;        // 指回仍在栈上的祖先 = 回边
+        else if (!dfsSt[to]) dfs(to);
+      });
+      dfsSt[id] = 2;
+    };
+    nodes.forEach(n => { if (!dfsSt[n.id]) dfs(n.id); });
+    const layer = {}; nodes.forEach(n => { layer[n.id] = 0; });
+    for (let it = 0; it < N; it++){
       let changed = false;
       edges.forEach(e => {
         if (byId[e.from] === undefined || byId[e.to] === undefined) return;
-        if (layer[e.from] < N && layer[e.to] < layer[e.from] + 1){ layer[e.to] = layer[e.from] + 1; changed = true; }
+        if (backE[e.from + '>' + e.to]) return;                  // 回边不参与分层
+        if (layer[e.to] < layer[e.from] + 1){ layer[e.to] = layer[e.from] + 1; changed = true; }
       });
       if (!changed) break;
     }
@@ -2562,8 +2579,8 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     nodes.forEach(n => { const L = layer[n.id]; (layers[L] = layers[L] || []).push(n); if (L > maxL) maxL = L; });
     // 尺寸（CJK ~ 字号宽）；节点宽随 label 自适应
     // 横向布局（sandy：横向从左到右、压低高度）：层=列（x 递增），列内纵向堆叠居中
-    const FS = 11, CH = 15.2, PADX = 15, NH = 38, VGAP = 14, HGAP = 40, PAD = 12;
-    const wOf = n => Math.max(66, String(n.label || '').length * CH + PADX * 2);
+    const FS = 11, CH = 15.2, PADX = 13, NH = 38, VGAP = 14, HGAP = 30, PAD = 12;
+    const wOf = n => Math.max(62, String(n.label || '').length * CH + PADX * 2);
     // 每列宽=该列最宽节点；记最高列（节点最多）定画布高
     const colW = {}; let maxColH = 0;
     for (let L = 0; L <= maxL; L++){
@@ -2572,9 +2589,19 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
       const h = row.length * NH + Math.max(0, row.length - 1) * VGAP;
       if (h > maxColH) maxColH = h;
     }
-    // 列 x 累加
+    // 列 x 累加：间隙按该段连线标签的实际宽度自适应。固定 HGAP 会让「被逼到墙角」这类
+    // 四五个字的标签横溢到两侧方框上（读起来像压字），所以取 max(HGAP, 该段最长标签宽)。
+    const gapNeed = {};
+    edges.forEach(e => {
+      if (byId[e.from] === undefined || byId[e.to] === undefined) return;
+      if (backE[e.from + '>' + e.to]) return;
+      const lab = String(e.label || '').trim();
+      if (!lab) return;
+      const a = layer[e.from], b = layer[e.to];
+      for (let L = a; L < b; L++) gapNeed[L] = Math.max(gapNeed[L] || 0, lab.length * FS * 1.18 + 14);
+    });
     const colX = {}; let xacc = PAD;
-    for (let L = 0; L <= maxL; L++){ colX[L] = xacc; xacc += colW[L] + HGAP; }
+    for (let L = 0; L <= maxL; L++){ colX[L] = xacc; xacc += colW[L] + Math.max(HGAP, gapNeed[L] || 0); }
     // 定位：列内纵向居中，x=列位
     const pos = {};
     for (let L = 0; L <= maxL; L++){
@@ -2584,27 +2611,49 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
       const x = colX[L], w = colW[L];
       row.forEach(n => { pos[n.id] = { x: x, y: y, w: w, cx: x + w / 2, cy: y + NH / 2, xL: x, xR: x + w }; y += NH + VGAP; });
     }
-    const totalW = (xacc - HGAP) + PAD;
-    const totalH = PAD * 2 + maxColH;
+    const totalW = (xacc - Math.max(HGAP, gapNeed[maxL] || 0)) + PAD;
+    // 有回边时在节点区下方留一条「回廊」，让「下一轮」绕到下面走，而不是横穿整排节点
+    const hasBack = edges.some(e => backE[e.from + '>' + e.to] && pos[e.from] && pos[e.to]);
+    const CHAN = 30;
+    const totalH = PAD * 2 + maxColH + (hasBack ? CHAN : 0);
+    const chanY = PAD + maxColH + CHAN / 2;
     const svg = document.createElementNS(SVGNS, 'svg');
     svg.setAttribute('viewBox', `0 0 ${Math.round(totalW)} ${Math.round(totalH)}`);
     svg.setAttribute('role', 'img');
     svg.setAttribute('aria-label', String((d && d.caption) || '全书因果骨架图'));
     const mk = (t, a) => { const el = document.createElementNS(SVGNS, t); for (const k in a) el.setAttribute(k, a[k]); return el; };
-    // 边：横向直角肘（源右缘 -> 横 -> 竖 -> 横 -> 目标左缘）；向右箭头。标签延后统一渲染（压在所有引线之上、节点之下，避免被后画的线穿过）
+    // 边：正向走「源右缘 -> 竖 -> 目标左缘」直角肘；回边走底部回廊（虚线，箭头向上指回起点列）。
+    // 标签延后统一渲染（压在所有引线之上），并在最后做一次防重叠下推。
     const elabels = [];
     edges.forEach(e => {
       const A = pos[e.from], B = pos[e.to];
       if (!A || !B) return;
-      const x1 = A.xR, y1 = A.cy, x2 = B.xL, y2 = B.cy;
-      const midX = (x1 + x2) / 2;
-      const pts = (y1 === y2) ? `${x1},${y1} ${x2},${y2}` : `${x1},${y1} ${midX},${y1} ${midX},${y2} ${x2},${y2}`;
-      svg.appendChild(mk('polyline', { points: pts, class: 'sk-line' }));
-      const ah = 5;                                    // 向右小箭头（目标左缘）
-      svg.appendChild(mk('path', { d: `M ${x2 - ah} ${y2 - ah} L ${x2 - ah} ${y2 + ah} L ${x2} ${y2} Z`, class: 'sk-arrow' }));
+      const isBack = !!backE[e.from + '>' + e.to];
+      let labX, labY;
+      if (isBack || B.xR <= A.xR){
+        const pts = `${A.cx},${A.y + NH} ${A.cx},${chanY} ${B.cx},${chanY} ${B.cx},${B.y + NH + 7}`;
+        svg.appendChild(mk('polyline', { points: pts, class: 'sk-line sk-back' }));
+        svg.appendChild(mk('path', { d: `M ${B.cx - 5} ${B.y + NH + 7} L ${B.cx + 5} ${B.y + NH + 7} L ${B.cx} ${B.y + NH} Z`, class: 'sk-arrow' }));
+        labX = (A.cx + B.cx) / 2; labY = chanY - 5;
+      } else {
+        const x1 = A.xR, y1 = A.cy, x2 = B.xL, y2 = B.cy;
+        const midX = (x1 + x2) / 2;
+        const pts = (y1 === y2) ? `${x1},${y1} ${x2},${y2}` : `${x1},${y1} ${midX},${y1} ${midX},${y2} ${x2},${y2}`;
+        svg.appendChild(mk('polyline', { points: pts, class: 'sk-line' }));
+        const ah = 5;                                            // 向右小箭头（目标左缘）
+        svg.appendChild(mk('path', { d: `M ${x2 - ah} ${y2 - ah} L ${x2 - ah} ${y2 + ah} L ${x2} ${y2} Z`, class: 'sk-arrow' }));
+        labX = midX; labY = (y1 === y2) ? y1 : (y1 + y2) / 2;
+      }
       const lab = (e.label || '').trim();
-      if (lab) elabels.push({ lab: lab, x: midX, ly: (y1 === y2) ? y1 : (y1 + y2) / 2 });
+      if (lab) elabels.push({ lab: lab, x: labX, ly: labY });
     });
+    // 防撞：同一列间隙里的几个标签若纵向距离小于一行，逐个下推到不重叠
+    const MINL = FS + 3;
+    elabels.sort((a, b) => (a.x - b.x) || (a.ly - b.ly));
+    for (let i = 1; i < elabels.length; i++){
+      const p = elabels[i - 1], c = elabels[i];
+      if (Math.abs(c.x - p.x) < 2 && c.ly - p.ly < MINL) c.ly = p.ly + MINL;
+    }
     // 转换标签：纯文字挪到引线上方（不套框、不压箭头）；延后渲染压在所有引线之上
     elabels.forEach(b => {
       const t = mk('text', { x: b.x, y: b.ly - 6, class: 'sk-elabel', 'text-anchor': 'middle' });
@@ -2681,7 +2730,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
       if (d === 0) { const font = '700 22px ' + SERIF, pad = 16, tw = measure(n.topic, font); Object.assign(n, { w: tw + pad * 2, h: 30 + pad * 2, pad, font, kind: 'root' }); return; }
       if (d === 1) { const font = '700 16.5px ' + SERIF, lh = 24, tw = measure(n.topic, font); Object.assign(n, { w: LEAD + tw + 2, h: lh, font, lh, lines: [n.topic], color: C.sec, kind: 'sec' }); return; }
       if (d === 2) { // 二级双层：关键词（米白） + 判断句（浅青） + 章码 chip，整块挂线
-        const kwFont = '700 15px ' + SERIF, jFont = '400 12.5px ' + SANS, chFont = '600 10.5px ' + SANS, jMax = 320;
+        const kwFont = '700 15px ' + SERIF, jFont = '400 12.5px ' + SANS, chFont = '600 10.5px ' + SANS, jMax = 380;
         const judge = n.tags ? (n.tags[0] || '') : '', chap = n.tags ? (n.tags[1] || '') : '';
         const kwW = measure(n.topic, kwFont), jLines = wrapText(judge, jFont, jMax);
         const jW = Math.max(0, ...jLines.map(l => measure(l, jFont))), chW = measure(chap, chFont) + 16;
@@ -2702,7 +2751,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
     // 按层收集 -> 列宽/列 x
     const byDepth = {}; let maxDepth = 0;
     (function collect(n){ (byDepth[n.depth] = byDepth[n.depth] || []).push(n); maxDepth = Math.max(maxDepth, n.depth); n.children.forEach(collect); })(rootNode);
-    const HGAP = 16, colW = [], colX = [];
+    const HGAP = 44, colW = [], colX = [];
     for (let d = 0; d <= maxDepth; d++) colW[d] = Math.max(...byDepth[d].map(n => n.w));
     colX[0] = 0; for (let d = 1; d <= maxDepth; d++) colX[d] = colX[d - 1] + colW[d - 1] + HGAP;
     // 竖向 tidy 布局：后序 y 游标（变高不重叠），父居子中点
@@ -2789,7 +2838,7 @@ body[data-theme="dark"] .eyebrow,body[data-theme="brand-dark"] .eyebrow{color:va
       if (!wrap.classList.contains('mm-fullscreen')) {
         const w0 = vp.getBoundingClientRect().width;
         if (w0) {
-          const want = Math.min(Math.max(Math.round(w0 * (H / W) + pad * 2), 420), 2200);
+          const want = Math.min(Math.max(Math.round(w0 * (H / W) + pad * 2), 420), 1040);
           if (Math.abs(want - vp.clientHeight) > 4) vp.style.height = want + 'px';
         }
       }
